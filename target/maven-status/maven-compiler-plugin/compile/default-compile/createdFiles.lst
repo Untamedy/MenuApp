@@ -1,0 +1,7 @@
+entities\Dish.class
+Main.class
+entities\DishesRepository.class
+entities\Price.class
+com\mycompany\menuapp\Init.class
+entities\Menu.class
+com\mycompany\menuapp\CreateDBData.class
