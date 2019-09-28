@@ -5,6 +5,7 @@
  */
 package com.mycompany.menuapp;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entities.Dish;
 import entities.DishesRepository;
@@ -37,7 +38,9 @@ public class CreateDBData {
         File file = new File(path);
         List<Dish> dishes = new ArrayList<>();
         try {
-            dishes = mapper.readValue(file, List.class);
+           List<Object>list = mapper.readValue(file,List.class);
+            dishes = mapper.convertValue(list, new TypeReference<List<Dish>>(){});
+            
         } catch (IOException ex) {
             Logger.getLogger(CreateDBData.class.getName()).log(Level.SEVERE, null, ex);
         }

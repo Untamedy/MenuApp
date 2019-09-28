@@ -52,10 +52,10 @@ public class Menu {
         double tmp = 0.2;
         List<Dish> dishes = new ArrayList<>();
         while (tmp <= max) {
-            Dish dish = repository.selectByWeight(max - tmp);
-            if (dish != null) {
-                tmp += dish.getWeight();
-                dishes.add(dish);
+            List<Dish> dish = repository.selectByWeight(max - tmp);
+            if (!dish.isEmpty()) {
+                tmp += dish.get(0).getWeight();
+                dishes.add(dish.get(0));
             }
         }
         return dishes;

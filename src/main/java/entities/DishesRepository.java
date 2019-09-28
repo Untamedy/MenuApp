@@ -42,7 +42,7 @@ public class DishesRepository {
     }
 
    public List<Dish> selectSale() {
-        List<Dish> dishesSaleList = (List<Dish>) entityManager.createQuery("select d from Dish d where d.sale=true").getResultList();
+        List<Dish> dishesSaleList = (List<Dish>) entityManager.createQuery("select d from Dish d where d.sale=1").getResultList();
         return dishesSaleList;
 
     }
@@ -57,22 +57,22 @@ public class DishesRepository {
         return dishes;
     }
 
-    public Dish selectByWeight(double tmp) {       
-        Dish dish = (Dish) entityManager.createQuery("SELECT d FROM Dish where d.weight<=" + tmp).getSingleResult();
-        return dish;
+    public List<Dish> selectByWeight(double tmp) {       
+        List<Dish> dishes = (List<Dish>) entityManager.createQuery("SELECT d FROM Dish d where d.weight<" + tmp).getResultList();
+        return dishes;
     }
 
     public boolean isExists(Dish dish) {
         boolean isStudentExists = false;
-        Dish newdish = findByName(dish.getName());
-        if (newdish!=null) {
+          List<Dish> newdish = findByName(dish.getName());
+        if (!newdish.isEmpty()) {
             return isStudentExists = true;
         }
         return isStudentExists;
     }
 
-    public Dish findByName(String name) {
-        Dish dishes = (Dish) entityManager.createQuery("SELECT d FROM Dish where d.name<=" + name).getSingleResult();
+    public List<Dish> findByName(String name) {
+        List<Dish> dishes = (List<Dish>) entityManager.createQuery("SELECT d FROM Dish d where d.name=" +"'"+ name+"'").getResultList();
         return dishes;
     }
 

@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 /**
  *
  * @author Lenovo
@@ -27,8 +28,8 @@ public class Dish implements Serializable {
     private double weight;  
     @Column
     private double price;
-    @Column
-    private boolean withSale;
+    @Column(name = "sale")
+    private boolean sale;
     @Column
     private String name;
 
@@ -39,14 +40,14 @@ public class Dish implements Serializable {
         this.id = id;
         this.weight = weight;
         this.price = price;
-        this.withSale = withSale;
+        this.sale = withSale;
         this.name = name;
     }
 
     public Dish(String name, double weight, double price, boolean withSale) {
         this.weight = weight;
         this.price = price;
-        this.withSale = withSale;
+        this.sale = withSale;
         this.name = name;
     }
 
@@ -75,11 +76,11 @@ public class Dish implements Serializable {
     }
 
     public boolean isWithSale() {
-        return withSale;
+        return sale;
     }
 
     public void setWithSale(boolean withSale) {
-        this.withSale = withSale;
+        this.sale = withSale;
     }
 
     public String getName() {

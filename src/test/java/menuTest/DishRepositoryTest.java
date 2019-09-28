@@ -49,14 +49,14 @@ public class DishRepositoryTest extends Assert{
 
     @Test
     public void selectByWeight() {
-        Dish dishes = repository.selectByWeight(0.5);
-        assertTrue(dishes.getWeight()<=0.5);
+        List<Dish> dishes = repository.selectByWeight(0.3);
+        assertFalse(dishes.get(0).getWeight()==0.3);
     }
 
     @Test
     public void findByNameTest() {
-       Dish dish =repository.findByName("Cake");
-        assertNotNull(dish);
+       List<Dish> dish =repository.findByName("Cake");
+        assertFalse(dish.isEmpty());
     }
 
     @Test

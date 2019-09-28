@@ -1,5 +1,5 @@
 entities\Dish.class
-Main.class
+com\mycompany\menuapp\CreateDBData$1.class
 entities\DishesRepository.class
 entities\Price.class
 com\mycompany\menuapp\Init.class
