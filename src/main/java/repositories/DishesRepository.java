@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package repositories;
 
+import entities.Dish;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -26,19 +27,21 @@ public class DishesRepository {
         this.entityManager = managerFactory.createEntityManager();
     }
 
-   public void addDish(Dish dish) {
+   public boolean addDish(Dish dish) {
         transaction = entityManager.getTransaction();
         if (!isExists(dish)) {
             try {
                 transaction.begin();
                 entityManager.persist(dish);
                 transaction.commit();
+                return true;
             } catch (Exception ex) {
                 if (transaction != null) {
                     transaction.rollback();
                 }
             }
         }
+        return false;
     }
 
    public List<Dish> selectSale() {

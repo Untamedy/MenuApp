@@ -5,11 +5,11 @@
  */
 package menuTest;
 
-import com.mycompany.menuapp.CreateDBData;
-import com.mycompany.menuapp.Init;
+import init.CreateDBData;
+import init.Init;
 import entities.Dish;
-import entities.DishesRepository;
-import entities.Menu;
+import repositories.DishesRepository;
+import services.Menu;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import static junit.framework.Assert.assertFalse;

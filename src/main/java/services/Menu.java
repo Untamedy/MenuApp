@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package services;
 
-import com.mycompany.menuapp.Init;
+import init.Init;
+import entities.Dish;
+import repositories.DishesRepository;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
@@ -27,9 +29,10 @@ public class Menu {
         this.repository = new DishesRepository(entityManagerFactory);
     }
 
-    public void addDish(String name, double weight, double price, boolean isSale) {
+    public boolean addDish(String name, double weight, double price, boolean isSale) {
         Dish dish = new Dish(name, weight, price, isSale);
-        repository.addDish(dish);
+     return  repository.addDish(dish);
+        
     }
 
     public List<Dish> findBySale() {

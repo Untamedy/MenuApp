@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.menuapp;
+package init;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entities.Dish;
-import entities.DishesRepository;
-import entities.Menu;
+import repositories.DishesRepository;
+import services.Menu;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
