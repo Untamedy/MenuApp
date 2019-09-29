@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: menuTest.DishRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.071 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.105 sec

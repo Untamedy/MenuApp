@@ -1,0 +1,8 @@
+#surefire
+#Sun Sep 29 23:45:45 EEST 2019
+maven.ext.class.path=D\:\\Documents\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Lenovo\\Documents\\MenuApp
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Lenovo\\.m2\\repository
+basedir=C\:\\Users\\Lenovo\\Documents\\MenuApp
+test=menuTest.Menutest

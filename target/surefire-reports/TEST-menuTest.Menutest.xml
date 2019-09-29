@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="menuTest.DishRepositoryTest" time="8.12" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="menuTest.Menutest" time="3.445" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="menuTest.DishRepositoryTest"/>
+    <property name="test" value="menuTest.Menutest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Lenovo\Documents\MenuApp"/>
     <property name="java.runtime.version" value="1.8.0_151-b12"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_151\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=menuTest.DishRepositoryTest -Dmaven.ext.class.path=D:\Documents\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=menuTest.Menutest -Dmaven.ext.class.path=D:\Documents\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,9 +62,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="menuTest.DishRepositoryTest" name="selectByWeight" time="0.021"/>
-  <testcase classname="menuTest.DishRepositoryTest" name="addStudenttest" time="0"/>
-  <testcase classname="menuTest.DishRepositoryTest" name="findByNameTest" time="0"/>
-  <testcase classname="menuTest.DishRepositoryTest" name="findIsSaleTest" time="0"/>
-  <testcase classname="menuTest.DishRepositoryTest" name="findByPrice" time="0.012"/>
+  <testcase classname="menuTest.Menutest" name="selectByWeight" time="0.047"/>
+  <testcase classname="menuTest.Menutest" name="addStudenttest" time="0.015"/>
 </testsuite>

@@ -49,13 +49,20 @@ public class Menu {
     }
 
     public List<Dish> getByWeight(double max) {
-        double tmp = 0.2;
-        List<Dish> dishes = new ArrayList<>();
+        double tmp = 0;        
+        int index = 0;
+        List<Dish> dishes = new ArrayList<>();        
         while (tmp <= max) {
             List<Dish> dish = repository.selectByWeight(max - tmp);
             if (!dish.isEmpty()) {
-                tmp += dish.get(0).getWeight();
-                dishes.add(dish.get(0));
+                if(!dishes.contains(dish.get(index))){
+                   tmp += dish.get(index).getWeight();
+                dishes.add(dish.get(index));
+                index++; 
+                }                
+            }
+            else{
+                return dishes;
             }
         }
         return dishes;

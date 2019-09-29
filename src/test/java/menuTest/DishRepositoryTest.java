@@ -20,8 +20,7 @@ import org.junit.Test;
  *
  * @author Lenovo
  */
-public class DishRepositoryTest extends Assert{
-    private static Menu menu;
+public class DishRepositoryTest extends Assert{    
     private static DishesRepository repository;
     private static String path = "src\\main\\resources\\menu.json";
     
@@ -40,7 +39,7 @@ public class DishRepositoryTest extends Assert{
     }
 
     @Test
-    public void addStudenttest() {
+    public void addDishTest() {
         Dish dish = new Dish("Fish", 0.4, 44.00, true);     
         repository.addDish(dish);
         assertTrue(repository.isExists(dish));
@@ -48,7 +47,7 @@ public class DishRepositoryTest extends Assert{
     }
 
     @Test
-    public void selectByWeight() {
+    public void selectByWeightTest() {
         List<Dish> dishes = repository.selectByWeight(0.3);
         assertFalse(dishes.get(0).getWeight()==0.3);
     }
@@ -66,11 +65,17 @@ public class DishRepositoryTest extends Assert{
     }
     
     @Test
-    public void findByPrice(){
+    public void findByPriceTest(){
         List<Dish> dishes = repository.selectByPrice(10, 50);     
         for(Dish d:dishes){
             assertTrue(d.getPrice()>10&&d.getPrice()<50);
         }
+    }
+    
+    @Test
+    public void getAllTest(){
+       List<Dish> dishes = repository.selectAll();
+       assertTrue(dishes.size()>10);
     }
 
    
