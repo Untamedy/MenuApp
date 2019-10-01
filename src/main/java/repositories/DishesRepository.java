@@ -50,7 +50,7 @@ public class DishesRepository {
 
     }
 
-  public  List<Dish> selectByPrice(int min, int max) {
+  public  List<Dish> selectByPrice(double min, double max) {
         List<Dish> dishes = entityManager.createQuery("SELECT d FROM Dish d WHERE d.price>" + min + " AND d.price<" + max).getResultList();
         return dishes;
     }
@@ -78,7 +78,10 @@ public class DishesRepository {
         List<Dish> dishes = (List<Dish>) entityManager.createQuery("SELECT d FROM Dish d where d.name=" +"'"+ name+"'").getResultList();
         return dishes;
     }
-
+public double getMaxPrice(){
+    double maxPrice =  (double) entityManager.createQuery("select max(d.price) from Dish d").getSingleResult();
+    return maxPrice;
+}
     
 
 }

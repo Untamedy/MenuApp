@@ -12,6 +12,19 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+       <div>
+            <form method="post">
+        <label>Total weight:
+            <input type="text" name="weight" required placeholder="Total weight"><br />
+        </label>
+        <br>
+            
+        <br>
+        <button type="submit">Submit</button>
+    </form>            
+        </div>
+        <div>
+            <button onclick="location.href='index.html'">Back to main</button>
+        </div>
     </body>
 </html>

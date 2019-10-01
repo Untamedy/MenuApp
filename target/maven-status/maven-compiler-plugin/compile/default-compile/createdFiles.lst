@@ -1,7 +1,10 @@
 entities\Dish.class
-com\mycompany\menuapp\CreateDBData$1.class
-entities\DishesRepository.class
-entities\Price.class
-com\mycompany\menuapp\Init.class
-entities\Menu.class
-com\mycompany\menuapp\CreateDBData.class
+servlets\AddDishServlet.class
+servlets\FindByWeightServlet.class
+init\CreateDBData.class
+init\Init.class
+init\CreateDBData$1.class
+services\Menu.class
+servlets\FindByPriceServlet.class
+repositories\DishesRepository.class
+servlets\FindBySaleServlet.class

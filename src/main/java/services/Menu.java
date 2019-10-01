@@ -40,7 +40,7 @@ public class Menu {
         return saleDish;
     }
 
-    public List<Dish> selectByPrice(int min, int max) {
+    public List<Dish> selectByPrice(double min, double max) {
         List<Dish> listByPrice = repository.selectByPrice(min, max);
         return listByPrice;
     }
@@ -69,6 +69,10 @@ public class Menu {
             }
         }
         return dishes;
+    }
+
+    public double getMaxPrice() {
+       return repository.getMaxPrice();
     }
 
     

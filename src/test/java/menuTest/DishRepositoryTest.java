@@ -75,7 +75,7 @@ public class DishRepositoryTest extends Assert{
     @Test
     public void getAllTest(){
        List<Dish> dishes = repository.selectAll();
-       assertTrue(dishes.size()>10);
+       assertTrue(dishes.size()>=10);
     }
 
    
