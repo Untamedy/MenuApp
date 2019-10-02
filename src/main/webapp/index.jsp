@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : Oct 2, 2019, 7:06:27 PM
+    Author     : YBolshakova
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>

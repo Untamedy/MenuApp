@@ -71,8 +71,8 @@ public class Menu {
         return dishes;
     }
 
-    public double getMaxPrice() {
-       return repository.getMaxPrice();
+    public double getMaxPrice(String param) {
+       return repository.getMaxPrice(param);
     }
 
     

@@ -13,7 +13,7 @@ import javax.persistence.Persistence;
  * @author Lenovo
  */
 public class Init {
-     private final EntityManagerFactory entittyManagerFactoty = Persistence.createEntityManagerFactory("JpaAppMySql");
+     private final EntityManagerFactory entittyManagerFactoty = Persistence.createEntityManagerFactory("JpaAppPostgresql");
 
     public Init() {
     }

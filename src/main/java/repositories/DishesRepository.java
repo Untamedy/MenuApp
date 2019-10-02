@@ -45,7 +45,7 @@ public class DishesRepository {
     }
 
    public List<Dish> selectSale() {
-        List<Dish> dishesSaleList = (List<Dish>) entityManager.createQuery("select d from Dish d where d.sale=1").getResultList();
+        List<Dish> dishesSaleList = (List<Dish>) entityManager.createQuery("select d from Dish d where d.sale=" + "true").getResultList();
         return dishesSaleList;
 
     }
@@ -78,8 +78,8 @@ public class DishesRepository {
         List<Dish> dishes = (List<Dish>) entityManager.createQuery("SELECT d FROM Dish d where d.name=" +"'"+ name+"'").getResultList();
         return dishes;
     }
-public double getMaxPrice(){
-    double maxPrice =  (double) entityManager.createQuery("select max(d.price) from Dish d").getSingleResult();
+public double getMaxPrice(String param){
+    double maxPrice =  (double) entityManager.createQuery("select max(d." + param+") from Dish d").getSingleResult();
     return maxPrice;
 }
     

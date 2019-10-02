@@ -30,7 +30,7 @@ public class FindByPriceServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        double maxPrice = menu.getMaxPrice();
+        double maxPrice = menu.getMaxPrice("price");
         double max = Integer.valueOf(request.getParameter("max"));
         double min = Integer.valueOf(request.getParameter("min"));
         List<Dish> dishes = new ArrayList<>();
